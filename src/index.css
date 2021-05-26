@@ -1,0 +1,245 @@
+body,
+html {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  line-height: 1.3;
+  background-color: #f3f3f3;
+}
+
+@keyframes prevStep {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-100%);
+  }
+}
+@keyframes nextStep {
+  0% {
+    opacity: 0;
+    transform: translate(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes nextToPrev {
+  0% {
+    opacity: 0;
+    transform: translate(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes prevToNext {
+  0% {
+    opacity: 1;
+    transform: translate(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(100%);
+  }
+}
+
+.prev {
+  transform: translate(-100%);
+  animation: prevStep 0.5s ease-in;
+}
+.next {
+  transform: translate(0);
+  animation: nextStep 0.5s ease-in;
+}
+.nextToPrev {
+  transform: translate(0);
+  animation: nextToPrev 0.5s ease-in;
+}
+
+.prevToNext {
+  transform: translate(100%);
+  animation: prevToNext 0.5s ease-in;
+}
+
+a {
+  text-decoration: none;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@keyframes offProfile {
+  0% {
+    height: 240px;
+  }
+  100% {
+    height: 15px;
+  }
+}
+
+@keyframes onProfile {
+  0% {
+    height: 15px;
+  }
+  100% {
+    height: 240px;
+  }
+}
+
+.upProfile {
+  transform: rotate(180deg);
+}
+
+.offProfile {
+  background: #fff;
+  margin: 35px 0;
+  width: 100%;
+  max-width: 590px;
+  padding: 35px;
+  border-radius: 10px;
+  height: 15px;
+  overflow: hidden;
+  animation: offProfile 0.3s ease-in;
+}
+
+.onProfile {
+  background: #fff;
+  margin: 35px 0;
+  width: 100%;
+  max-width: 590px;
+  padding: 35px;
+  border-radius: 10px;
+  height: 240px;
+  overflow: hidden;
+  animation: onProfile 0.3s ease-in;
+}
+
+.profile {
+  background: #fff;
+  margin: 35px 0;
+  width: 100%;
+  max-width: 590px;
+  padding: 35px;
+  border-radius: 10px;
+  height: 240px;
+  overflow: hidden;
+}
+
+@keyframes offMentor {
+  0% {
+    height: 440px;
+  }
+  100% {
+    height: 15px;
+  }
+}
+
+@keyframes onMentor {
+  0% {
+    height: 15px;
+  }
+  100% {
+    height: 440px;
+  }
+}
+.upMentor {
+  transform: rotate(180deg);
+}
+.offMentor {
+  background: #fff;
+  margin: 35px 0;
+  width: 100%;
+  max-width: 590px;
+  padding: 35px;
+  border-radius: 10px;
+  height: 15px;
+  animation: offMentor 0.3s ease-in;
+  overflow: hidden;
+}
+
+.onMentor {
+  background: #fff;
+  margin: 35px 0;
+  width: 100%;
+  max-width: 590px;
+  padding: 35px;
+  border-radius: 10px;
+  height: 440px;
+  animation: onMentor 0.3s ease-in;
+  overflow: hidden;
+}
+
+.mentor {
+  background: #fff;
+  margin: 35px 0;
+  width: 100%;
+  max-width: 590px;
+  padding: 35px;
+  border-radius: 10px;
+  height: 440px;
+}
+
+@keyframes offMentorCon {
+  0% {
+    height: 586px;
+  }
+  100% {
+    height: 15px;
+  }
+}
+
+@keyframes onMentorCon {
+  0% {
+    height: 15px;
+  }
+  100% {
+    height: 586px;
+  }
+}
+
+.upMentorCon {
+  transform: rotate(180deg);
+}
+.offMentorCon {
+  background: #fff;
+  margin: 35px 0;
+  width: 100%;
+  max-width: 590px;
+  padding: 35px;
+  border-radius: 10px;
+  height: 15px;
+  overflow: hidden;
+  animation: offMentorCon 0.3s ease-in;
+}
+
+.onMentorCon {
+  background: #fff;
+  margin: 35px 0;
+  width: 100%;
+  max-width: 590px;
+  padding: 35px;
+  border-radius: 10px;
+  height: 586px;
+  overflow: hidden;
+  animation: onMentorCon 0.3s ease-in;
+}
+
+.mentorCon {
+  background: #fff;
+  margin: 35px 0;
+  width: 100%;
+  max-width: 590px;
+  padding: 35px;
+  border-radius: 10px;
+  height: 586px;
+}
