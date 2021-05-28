@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { initUser, logoutUser } from "../actions/useraction";
-import logo from "../images/Bting.png";
+import logo from "../images/Starting_logo_nv.png";
 import Profileupdate from "./Profileupdate";
 
 const HeaderWrapper = styled.div`
@@ -83,7 +83,11 @@ function Header() {
             <img
               src={logo}
               alt="a5183685242c9929e52ec8f20821c0cb"
-              style={{ verticalAlign: "middle", maxHeight: "40px" }}
+              style={{
+                verticalAlign: "middle",
+                maxHeight: "40px",
+                cursor: "pointer",
+              }}
               onClick={() => onHistory("/")}
             />
           </LogoWrapper>

@@ -2,7 +2,7 @@ import React, { useCallback, useEffect } from "react";
 import styled from "styled-components";
 import useInput from "../hooks/useInput";
 import { useDispatch } from "react-redux";
-import { loginUser } from "../actions/useraction";
+import { initUser, loginUser } from "../actions/useraction";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import loadingbar from "../images/loginloading.svg";
@@ -44,7 +44,7 @@ const LoginButton = styled.button`
 function Login() {
   const dispatch = useDispatch();
   const history = useHistory();
-  const { isUserLoginDone, isUserLoginLoading } = useSelector(
+  const { isUserLoginDone, isUserLoginLoading, isUserLoginError } = useSelector(
     (state) => state.user
   );
   const [email, onChangeEmail] = useInput("");
@@ -74,6 +74,13 @@ function Login() {
       history.replace("/");
     }
   }, [isUserLoginDone, history]);
+
+  useEffect(() => {
+    if (isUserLoginError) {
+      alert(isUserLoginError);
+      dispatch(initUser());
+    }
+  }, [dispatch, isUserLoginError]);
   return (
     <>
       <LoginWrapper>

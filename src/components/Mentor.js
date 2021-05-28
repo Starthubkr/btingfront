@@ -1,4 +1,5 @@
 import React, { useCallback } from "react";
+import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
@@ -60,12 +61,17 @@ const Line = styled.div`
 
 function Mentor({ mentor }) {
   const history = useHistory();
+  const { userInfo } = useSelector((state) => state.user);
 
   const onMove = useCallback(
     (mentorId) => {
+      if (!userInfo) {
+        alert("로그인 해주세요.");
+        return;
+      }
       history.push(`/mentordetail/${mentorId}`);
     },
-    [history]
+    [history, userInfo]
   );
 
   return (

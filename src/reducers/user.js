@@ -62,6 +62,7 @@ const user = (state = initialState, action) => {
         isUserUpdateDone: false,
         isUserCreateDone: false,
         isCreateImgDone: false,
+        isUserLoginError: null,
       };
     case USER_CREATE_REQUEST:
       return {

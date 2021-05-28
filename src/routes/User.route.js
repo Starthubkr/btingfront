@@ -15,10 +15,10 @@ import { useDispatch } from "react-redux";
 import MentorUpdate from "../pages/MentorUpdate";
 
 function User() {
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(userCheck());
-  // }, [dispatch]);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(userCheck());
+  }, [dispatch]);
   return (
     <>
       <Header />
